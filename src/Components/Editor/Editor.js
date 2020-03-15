@@ -12,7 +12,7 @@ class Editor extends React.Component {
     render(){
         return (
             <div>
-                <textarea name="" id="" cols="30" rows="10" onChange={this.handleChange}></textarea>
+                <textarea name="" id="editor" cols="30" rows="10" onChange={this.handleChange}></textarea>
             </div> 
          );
     }

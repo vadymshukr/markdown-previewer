@@ -2,19 +2,20 @@ import React from 'react';
 import './App.css';
 import Editor from '../src/Components/Editor/Editor'
 import Preview from '../src/Components/Preview/Preview'
+const marked = require('marked');
 
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      content: 'sdsdsd'
+      content: ''
     }
     this.dataUpdate = this.dataUpdate.bind(this);
   }
 
   dataUpdate(data){
     this.setState({
-      content: data
+      content: marked(data)
     })
   }
   render(){

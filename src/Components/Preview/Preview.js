@@ -3,7 +3,7 @@ import './Preview.css';
 const marked = require('marked');
 function Preview(props) {
         return (
-        <div>{props.viewContent}</div> 
+        <div id="preview" dangerouslySetInnerHTML={{__html:props.viewContent}}></div> 
 
         );
 }
