@@ -19,9 +19,9 @@ class Editor extends React.Component {
 
     render(){
         return (
-            <div>
+            <div className="editor-section">
                 <form>
-                    <textarea name="" id="editor" cols="30" rows="10" onChange={this.handleChange} >{this.props.placeholder}</textarea>
+                    <textarea name="" id="editor" cols="30" rows="10" onChange={this.handleChange} defaultValue={this.props.placeholder}></textarea>
                     <button type="reset" onClick={this.handleReset}>Reset</button>
                 </form>
                 

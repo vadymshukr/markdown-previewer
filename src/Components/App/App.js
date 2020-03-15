@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import Editor from '../src/Components/Editor/Editor'
-import Preview from '../src/Components/Preview/Preview'
+import Editor from '../Editor/Editor'
+import Preview from '../Preview/Preview'
 const marked = require('marked');
 // ALLOWS LINE BREAKS WITH RETURN BUTTON
 marked.setOptions({
   breaks: true,
 });
 
-const placeholder = 
+let placeholder = 
 `# Welcome to my React Markdown Previewer!
 
 ## This is a sub-heading...
@@ -75,6 +75,7 @@ class App extends React.Component {
     this.setState({
       content: ''
     })
+    placeholder = '';
   }
   render(){
     return (
